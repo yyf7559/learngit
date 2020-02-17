@@ -1,4 +1,3 @@
 ﻿Git is a distributed version control system.
 Git is free.
-ZZ
-
+Git has a mutable index called
