@@ -18,9 +18,10 @@ import java.util.List;
 @Controller
 public class BookController {
     @Resource
-    private BookService bookService;
-    @Resource
     private UserService userService;
+    @Resource
+    private BookService bookService;
+    String name;
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
