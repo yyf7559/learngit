@@ -1,0 +1,9 @@
+entity\Invitation.class
+dao\invitation\InvitationMapper.class
+dao\replay\ReplayMapper.class
+service\replay\ReplayServiceImpl.class
+service\invitation\InvitationSeviceImpl.class
+service\replay\ReplayService.class
+service\invitation\InvitationSevice.class
+controller\InvitationController.class
+entity\Replay.class

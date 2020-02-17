@@ -1,0 +1,9 @@
+dao\users\UserMapper.class
+dao\book\BookMapper.class
+service\BookService.class
+service\UserService.class
+entity\Users.class
+controller\BookController.class
+entity\Book.class
+service\BookServiceImpl.class
+service\UserServiceImpl.class

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.book.BookMapper">
+    <select id="all" resultType="entity.Book">
+        select * from book_info
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="book_name != null and book_name != ''">
+                book_name like CONCAT('%',#{book_name},'%')
+            </if>
+            <if test="book_type != null and book_type!=0">
+                and book_type = #{book_type}
+            </if>
+            <if test="is_borrow != null and is_borrow!=-1">
+                and is_borrow = #{is_borrow}
+            </if>
+        </trim>
+        order by creation_time desc
+        limit #{pageNo},#{pageSize}
+    </select>
+    <select id="totalCount" resultType="java.lang.Integer">
+        select count(1) from book_info
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="book_name != null and book_name != ''">
+                book_name like CONCAT('%',#{book_name},'%')
+            </if>
+            <if test="book_type != null and book_type!=0">
+                and book_type = #{book_type}
+            </if>
+            <if test="is_borrow != null and is_borrow!=-1">
+                and is_borrow = #{is_borrow}
+            </if>
+        </trim>
+    </select>
+</mapper>

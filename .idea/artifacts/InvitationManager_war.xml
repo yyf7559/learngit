@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="InvitationManager:war">
+    <output-path>$PROJECT_DIR$/InvitationManager/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>InvitationManager</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="InvitationManager.war">
+      <element id="artifact" artifact-name="InvitationManager:war exploded" />
+    </root>
+  </artifact>
+</component>

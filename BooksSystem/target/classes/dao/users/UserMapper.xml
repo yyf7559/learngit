@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.users.UserMapper">
+    <update id="updateDate">
+        update users set last_logintime = #{last_logintime} where user_id = #{user_id}
+    </update>
+    <select id="login" resultType="entity.Users">
+        select * from users where user_code = #{userName} and password = #{password}
+    </select>
+</mapper>
