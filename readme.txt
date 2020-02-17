@@ -1,2 +1,4 @@
-﻿Git is a version conrtol ststem.
-Git is free sofrware
+﻿Git is a system.
+Git is free.
+ZZ
+
